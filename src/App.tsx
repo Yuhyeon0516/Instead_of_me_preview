@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { HStack, VStack, Image } from "@chakra-ui/react";
+import Category from "./components/category/Category";
+import SelectedPreviewList from "./components/selected_preview_list/SelectedPreviewList";
+import Preview from "./components/preview/Preview";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <VStack w={"100%"} h={"100vh"} alignItems={"flex-start"}>
+            <Image
+                src={require("./assets/logo/blackLogo/textLogo7.png")}
+                w={"calc('100%'-10)"}
+                ml={20}
+                mb={20}
+            />
+            <HStack w={"100%"} flex={1} gap={0}>
+                <Category />
+                <SelectedPreviewList />
+                <Preview />
+            </HStack>
+        </VStack>
+    );
 }
 
 export default App;
