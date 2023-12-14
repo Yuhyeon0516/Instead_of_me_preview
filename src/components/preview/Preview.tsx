@@ -1,4 +1,11 @@
-import {Box, HStack, Heading, Pressable} from "@gluestack-ui/themed";
+import {
+    Box,
+    HStack,
+    Heading,
+    Pressable,
+    Text,
+    VStack,
+} from "@gluestack-ui/themed";
 import React, {useState} from "react";
 import {DeviceFrameset} from "react-device-frameset";
 import "react-device-frameset/styles/marvel-devices.min.css";
@@ -32,52 +39,93 @@ export default function Preview() {
                 alignItems="center"
                 justifyContent="center"
                 position="relative">
-                <Box position="relative">
-                    <DeviceFrameset
-                        device={deviceFrame}
-                        color="black"
-                        landscape={landscape}
-                        zoom={0.9}>
-                        <Box w={"100%"} h={"100%"}>
-                            <ScrollView
-                                showsVerticalScrollIndicator={false}
-                                style={{
-                                    width: "100%",
-                                    height: 3000,
-                                    overflow: "scroll",
-                                }}>
-                                <Heading color="black">Scroll</Heading>
-                                <Heading color="black">제발</Heading>
-                                <Heading color="black">되게</Heading>
-                                <Heading color="black">해주세요</Heading>
-                                <Box h={800} />
-                                <Heading color="black">와</Heading>
-                                <Heading color="black">와</Heading>
-                                <Heading color="black">와</Heading>
-                                <Heading color="black">드디어</Heading>
-                                <Heading color="black">성공했다</Heading>
-                                <Heading color="black">
-                                    .............................................................................
-                                </Heading>
-                            </ScrollView>
-                        </Box>
-                    </DeviceFrameset>
-                </Box>
-                <HStack position="absolute" bottom={0} left={50} space="md">
-                    <Pressable onPress={onPressTablet} p={10}>
-                        <IoIosTabletPortrait
-                            style={{fontSize: 30, color: "black"}}
-                        />
+                <DeviceFrameset
+                    device={deviceFrame}
+                    color="black"
+                    landscape={landscape}
+                    zoom={0.9}>
+                    <Box w={"100%"} h={"100%"}>
+                        <ScrollView
+                            showsVerticalScrollIndicator={false}
+                            style={{
+                                width: "100%",
+                                height: 3000,
+                                overflow: "scroll",
+                            }}>
+                            <Heading color="black">Scroll</Heading>
+                            <Heading color="black">제발</Heading>
+                            <Heading color="black">되게</Heading>
+                            <Heading color="black">해주세요</Heading>
+                            <Box h={800} />
+                            <Heading color="black">와</Heading>
+                            <Heading color="black">와</Heading>
+                            <Heading color="black">와</Heading>
+                            <Heading color="black">드디어</Heading>
+                            <Heading color="black">성공했다</Heading>
+                            <Heading color="black">
+                                .............................................................................
+                            </Heading>
+                        </ScrollView>
+                    </Box>
+                </DeviceFrameset>
+                <HStack position="absolute" bottom={0} left={30} space="md">
+                    <Pressable
+                        onPress={onPressTablet}
+                        p={10}
+                        $hover={{transform: "scale(1.2)"}}
+                        sx={{
+                            _web: {
+                                cursor: "pointer",
+                                transition: "all 0.2s linear",
+                            },
+                        }}>
+                        <VStack alignItems="center" space="sm">
+                            <IoIosTabletPortrait
+                                style={{fontSize: 40, color: "black"}}
+                            />
+                            <Text fontSize={14} fontWeight="$medium">
+                                Tablet
+                            </Text>
+                        </VStack>
                     </Pressable>
-                    <Pressable onPress={onPressPhone} p={10}>
-                        <IoIosPhonePortrait
-                            style={{fontSize: 30, color: "black"}}
-                        />
+                    <Pressable
+                        onPress={onPressPhone}
+                        p={10}
+                        $hover={{transform: "scale(1.2)"}}
+                        sx={{
+                            _web: {
+                                cursor: "pointer",
+                                transition: "all 0.2s linear",
+                            },
+                        }}>
+                        <VStack alignItems="center" space="sm">
+                            <IoIosPhonePortrait
+                                style={{fontSize: 40, color: "black"}}
+                            />
+
+                            <Text fontSize={14} fontWeight="$medium">
+                                Phone
+                            </Text>
+                        </VStack>
                     </Pressable>
-                    <Pressable onPress={toggleLandscape} p={10}>
-                        <MdOutlineScreenRotation
-                            style={{fontSize: 30, color: "black"}}
-                        />
+                    <Pressable
+                        onPress={toggleLandscape}
+                        p={10}
+                        $hover={{transform: "scale(1.2)"}}
+                        sx={{
+                            _web: {
+                                cursor: "pointer",
+                                transition: "all 0.2s linear",
+                            },
+                        }}>
+                        <VStack alignItems="center" space="sm">
+                            <MdOutlineScreenRotation
+                                style={{fontSize: 40, color: "black"}}
+                            />
+                            <Text fontSize={14} fontWeight="$medium">
+                                Rotation
+                            </Text>
+                        </VStack>
                     </Pressable>
                 </HStack>
             </Box>
