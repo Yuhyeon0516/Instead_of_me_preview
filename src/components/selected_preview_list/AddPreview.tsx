@@ -19,7 +19,7 @@ export default function AddPreview() {
             my={30}
             alignItems="center"
             justifyContent="center"
-            $hover={{transform: "scale(1.1)"}}
+            $hover={{transform: "scale(1.05)"}}
             sx={{
                 _web: {
                     transition: "all 0.2s linear",

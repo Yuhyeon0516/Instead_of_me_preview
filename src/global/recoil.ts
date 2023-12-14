@@ -1,7 +1,7 @@
 import {atom} from "recoil";
 
 export const CategoryState = atom({
-    default: "",
+    default: "App",
     key: "Category",
 });
 
@@ -18,4 +18,9 @@ export const ShowDetailPreviewModalState = atom({
 export const SelectPreviewIdState = atom({
     default: 0,
     key: "SelectPreviewIdState",
+});
+
+export const SelectedPreviewState = atom<number[]>({
+    default: [],
+    key: "SelectedPreviewState",
 });

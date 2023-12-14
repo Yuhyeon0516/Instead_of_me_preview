@@ -37,7 +37,7 @@ export default function Preview() {
                 w={"100%"}
                 h={"100%"}
                 alignItems="center"
-                justifyContent="flex-end"
+                justifyContent={landscape ? "center" : "flex-end"}
                 top={40}>
                 <DeviceFrameset
                     device={deviceFrame}
