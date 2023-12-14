@@ -32,13 +32,13 @@ export default function Preview() {
     }
 
     return (
-        <Box flex={6} alignItems="center">
+        <Box flex={5} alignItems="center">
             <Box
                 w={"100%"}
                 h={"100%"}
                 alignItems="center"
-                justifyContent="center"
-                position="relative">
+                justifyContent="flex-end"
+                top={40}>
                 <DeviceFrameset
                     device={deviceFrame}
                     color="black"
@@ -50,7 +50,6 @@ export default function Preview() {
                             style={{
                                 width: "100%",
                                 height: 3000,
-                                overflow: "scroll",
                             }}>
                             <Heading color="black">Scroll</Heading>
                             <Heading color="black">제발</Heading>
@@ -68,14 +67,13 @@ export default function Preview() {
                         </ScrollView>
                     </Box>
                 </DeviceFrameset>
-                <HStack position="absolute" bottom={0} left={30} space="md">
+                <HStack position="absolute" bottom={40} left={30} space="md">
                     <Pressable
                         onPress={onPressTablet}
                         p={10}
                         $hover={{transform: "scale(1.2)"}}
                         sx={{
                             _web: {
-                                cursor: "pointer",
                                 transition: "all 0.2s linear",
                             },
                         }}>
@@ -94,7 +92,6 @@ export default function Preview() {
                         $hover={{transform: "scale(1.2)"}}
                         sx={{
                             _web: {
-                                cursor: "pointer",
                                 transition: "all 0.2s linear",
                             },
                         }}>
@@ -114,7 +111,6 @@ export default function Preview() {
                         $hover={{transform: "scale(1.2)"}}
                         sx={{
                             _web: {
-                                cursor: "pointer",
                                 transition: "all 0.2s linear",
                             },
                         }}>

@@ -2,7 +2,7 @@ import React from "react";
 import {ICategoryItem} from "../../types/type";
 import {useRecoilState} from "recoil";
 import {CategoryState} from "../../global/recoil";
-import {HStack, Heading, Icon, Pressable} from "@gluestack-ui/themed";
+import {HStack, Heading, Pressable} from "@gluestack-ui/themed";
 import {FaChevronRight} from "react-icons/fa";
 
 export default function CategoryItem({title}: ICategoryItem) {
@@ -16,10 +16,9 @@ export default function CategoryItem({title}: ICategoryItem) {
     return (
         <Pressable onPress={onPressCategory}>
             <HStack
-                w={"90%"}
+                w={"80%"}
                 sx={{
                     _web: {
-                        cursor: "pointer",
                         transition: "all 0.2s linear",
                     },
                 }}
@@ -28,11 +27,18 @@ export default function CategoryItem({title}: ICategoryItem) {
                 borderRadius={20}
                 transform={
                     selectedCategory === title ? "translateX(15px)" : "none"
-                }>
-                <Heading flex={1} ml={20} fontSize={18}>
+                }
+                alignItems="center"
+                py={10}
+                px={20}>
+                <Heading flex={1} fontSize={18}>
                     {title}
                 </Heading>
-                <Icon as={FaChevronRight} mr={20} />
+                <FaChevronRight
+                    style={{
+                        fontSize: 20,
+                    }}
+                />
             </HStack>
         </Pressable>
     );
