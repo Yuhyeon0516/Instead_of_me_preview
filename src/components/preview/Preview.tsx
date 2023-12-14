@@ -1,60 +1,46 @@
-import {Box, Heading, Icon, Pressable} from "@gluestack-ui/themed";
+import {Box, HStack, Heading, Pressable} from "@gluestack-ui/themed";
 import React, {useState} from "react";
 import {DeviceFrameset} from "react-device-frameset";
 import "react-device-frameset/styles/marvel-devices.min.css";
 import {ScrollView} from "react-native";
-import {GrPowerCycle} from "react-icons/gr";
-
-const LONG = 600;
-const SHORT = 350;
+import {IoIosTabletPortrait, IoIosPhonePortrait} from "react-icons/io";
+import {MdOutlineScreenRotation} from "react-icons/md";
 
 export default function Preview() {
     const [landscape, setLandscape] = useState(false);
-    const [width, setWidth] = useState(SHORT);
-    const [height, setHeight] = useState(LONG);
+    const [deviceFrame, setDeviceFrame] = useState<
+        "iPhone 8 Plus" | "iPad Mini"
+    >("iPhone 8 Plus");
 
     function toggleLandscape() {
         setLandscape(prev => !prev);
-        setWidth(landscape ? SHORT : LONG);
-        setHeight(landscape ? LONG : SHORT);
+    }
+
+    function onPressTablet() {
+        setDeviceFrame("iPad Mini");
+    }
+
+    function onPressPhone() {
+        setDeviceFrame("iPhone 8 Plus");
     }
 
     return (
-        <>
-            <Box flex={6} alignItems="center">
-                <Box
-                    w={"100%"}
-                    h={"100%"}
-                    alignItems="center"
-                    justifyContent="center"
-                    position="relative">
-                    <Box position="relative">
-                        <DeviceFrameset
-                            height={LONG}
-                            width={SHORT}
-                            device="iPhone 8 Plus"
-                            color="black"
-                            landscape={landscape}
-                            style={{
-                                position: "absolute",
-                                zIndex: -1,
-                                left: 0,
-                            }}
-                        />
-
-                        <Box
-                            w={width}
-                            h={height}
-                            top={landscape ? 26 : 112}
-                            left={landscape ? 112 : 26}
-                            position="absolute"
-                            zIndex={10}
-                            sx={{
-                                _web: {
-                                    transition: "all 0.2s linear",
-                                },
-                            }}>
+        <Box flex={6} alignItems="center">
+            <Box
+                w={"100%"}
+                h={"100%"}
+                alignItems="center"
+                justifyContent="center"
+                position="relative">
+                <Box position="relative">
+                    <DeviceFrameset
+                        device={deviceFrame}
+                        color="black"
+                        landscape={landscape}
+                        zoom={0.9}>
+                        <Box w={"100%"} h={"100%"}>
                             <ScrollView
+                                showsVerticalScrollIndicator={false}
                                 style={{
                                     width: "100%",
                                     height: 3000,
@@ -75,16 +61,26 @@ export default function Preview() {
                                 </Heading>
                             </ScrollView>
                         </Box>
-                    </Box>
-                    <Pressable
-                        onPress={toggleLandscape}
-                        position="absolute"
-                        bottom={0}
-                        right={50}>
-                        <Icon as={GrPowerCycle} size="xl" />
-                    </Pressable>
+                    </DeviceFrameset>
                 </Box>
+                <HStack position="absolute" bottom={0} left={50} space="md">
+                    <Pressable onPress={onPressTablet} p={10}>
+                        <IoIosTabletPortrait
+                            style={{fontSize: 30, color: "black"}}
+                        />
+                    </Pressable>
+                    <Pressable onPress={onPressPhone} p={10}>
+                        <IoIosPhonePortrait
+                            style={{fontSize: 30, color: "black"}}
+                        />
+                    </Pressable>
+                    <Pressable onPress={toggleLandscape} p={10}>
+                        <MdOutlineScreenRotation
+                            style={{fontSize: 30, color: "black"}}
+                        />
+                    </Pressable>
+                </HStack>
             </Box>
-        </>
+        </Box>
     );
 }
