@@ -15,6 +15,7 @@ import {
 import React from "react";
 import {useRecoilState, useRecoilValue, useSetRecoilState} from "recoil";
 import {
+    MobileScreenState,
     SelectPreviewIdState,
     SelectedPreviewState,
     ShowDetailPreviewModalState,
@@ -27,16 +28,18 @@ export default function DetailPreviewModal() {
     const [showModal, setShowModal] = useRecoilState(
         ShowDetailPreviewModalState,
     );
-    const setSelectedPreviewState = useSetRecoilState(SelectedPreviewState);
-    const setSelectPreviewModalState = useSetRecoilState(
+    const setSelectedPreview = useSetRecoilState(SelectedPreviewState);
+    const setSelectPreviewModal = useSetRecoilState(
         ShowSelectPreviewModalState,
     );
+    const setMobileScreen = useSetRecoilState(MobileScreenState);
     const imageId = useRecoilValue(SelectPreviewIdState);
 
     function onPressAddButton() {
-        setSelectedPreviewState(prev => [...prev, imageId]);
+        setSelectedPreview(prev => [...prev, imageId]);
         setShowModal(false);
-        setSelectPreviewModalState(false);
+        setSelectPreviewModal(false);
+        setMobileScreen(imageId);
     }
 
     return imageId ? (
