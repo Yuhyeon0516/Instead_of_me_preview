@@ -8,33 +8,38 @@ import Category from "./components/category/Category";
 import SelectedPreviewList from "./components/selected_preview_list/SelectedPreviewList";
 import Preview from "./components/preview/Preview";
 import {RecoilRoot} from "recoil";
+import SelectPreviewModal from "./components/selected_preview_list/SelectPreviewModal";
+import DetailPreviewModal from "./components/selected_preview_list/DetailPreviewModal";
 
 function App(): JSX.Element {
     return (
         <GluestackUIProvider config={config}>
             <SafeAreaProvider>
-                <ToastProvider>
-                    <OverlayProvider>
-                        <RecoilRoot>
+                <RecoilRoot>
+                    <ToastProvider>
+                        <OverlayProvider>
                             <VStack
                                 w={"$full"}
                                 h={"$full"}
-                                alignItems={"flex-start"}>
+                                alignItems={"flex-start"}
+                                overflow="hidden">
                                 <Image
                                     source={require("./assets/logo/blackLogo/textLogo7.png")}
                                     width={200}
                                     ml={20}
                                     mb={20}
                                 />
-                                <HStack w={"$full"} h={800}>
+                                <HStack w={"$full"} h={840}>
                                     <Category />
                                     <SelectedPreviewList />
                                     <Preview />
                                 </HStack>
+                                <SelectPreviewModal />
+                                <DetailPreviewModal />
                             </VStack>
-                        </RecoilRoot>
-                    </OverlayProvider>
-                </ToastProvider>
+                        </OverlayProvider>
+                    </ToastProvider>
+                </RecoilRoot>
             </SafeAreaProvider>
         </GluestackUIProvider>
     );
