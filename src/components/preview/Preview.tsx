@@ -1,11 +1,4 @@
-import {
-    Box,
-    HStack,
-    Heading,
-    Pressable,
-    Text,
-    VStack,
-} from "@gluestack-ui/themed";
+import {Box, HStack, Pressable, Text, VStack} from "@gluestack-ui/themed";
 import React, {useState} from "react";
 import {DeviceFrameset} from "react-device-frameset";
 import "react-device-frameset/styles/marvel-devices.min.css";
@@ -38,7 +31,7 @@ export default function Preview() {
                 h={"100%"}
                 alignItems="center"
                 justifyContent={landscape ? "center" : "flex-end"}
-                top={40}>
+                top={30}>
                 <DeviceFrameset
                     device={deviceFrame}
                     color="black"
@@ -49,22 +42,9 @@ export default function Preview() {
                             showsVerticalScrollIndicator={false}
                             style={{
                                 width: "100%",
-                                height: 3000,
-                            }}>
-                            <Heading color="black">Scroll</Heading>
-                            <Heading color="black">제발</Heading>
-                            <Heading color="black">되게</Heading>
-                            <Heading color="black">해주세요</Heading>
-                            <Box h={800} />
-                            <Heading color="black">와</Heading>
-                            <Heading color="black">와</Heading>
-                            <Heading color="black">와</Heading>
-                            <Heading color="black">드디어</Heading>
-                            <Heading color="black">성공했다</Heading>
-                            <Heading color="black">
-                                .............................................................................
-                            </Heading>
-                        </ScrollView>
+                                minHeight: 736,
+                            }}
+                        />
                     </Box>
                 </DeviceFrameset>
                 <HStack position="absolute" bottom={40} left={30} space="md">

@@ -24,3 +24,8 @@ export const SelectedPreviewState = atom<number[]>({
     default: [],
     key: "SelectedPreviewState",
 });
+
+export const MobileScreenState = atom({
+    default: 0,
+    key: "MobileScreenState",
+});
