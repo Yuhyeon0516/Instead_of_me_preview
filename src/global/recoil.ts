@@ -1,4 +1,6 @@
 import {atom} from "recoil";
+import {PreviewList} from "./constant";
+import {IPreviewItem} from "../types/type";
 
 export const CategoryState = atom({
     default: "App",
@@ -28,4 +30,9 @@ export const SelectedPreviewState = atom<number[]>({
 export const MobileScreenState = atom({
     default: 0,
     key: "MobileScreenState",
+});
+
+export const PreviewListState = atom<IPreviewItem[]>({
+    default: PreviewList,
+    key: "PreviewListState",
 });
