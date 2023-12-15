@@ -1,15 +1,19 @@
 import {IPreviewItem} from "../types/type";
+import 강의실 from "../components/preview/list/강의실";
+import 강의평가 from "../components/preview/list/강의평가";
 
 export const PreviewList: IPreviewItem[] = [
     {
         id: 1,
         title: "강의실",
         image: require("../assets/preview/강의실.png"),
+        component: 강의실,
     },
     {
         id: 2,
         title: "강의평가",
         image: require("../assets/preview/강의평가.png"),
+        component: 강의평가,
     },
     {
         id: 3,

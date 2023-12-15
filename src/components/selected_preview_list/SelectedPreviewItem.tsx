@@ -10,8 +10,8 @@ import {
     VStack,
 } from "@gluestack-ui/themed";
 import {PreviewList} from "../../global/constant";
-import {useSetRecoilState} from "recoil";
-import {SelectedPreviewState} from "../../global/recoil";
+import {useRecoilState, useSetRecoilState} from "recoil";
+import {MobileScreenState, SelectedPreviewState} from "../../global/recoil";
 
 export default function SelectedPreviewItem({
     id,
@@ -21,9 +21,17 @@ export default function SelectedPreviewItem({
     index: number;
 }) {
     const setSelectedPreview = useSetRecoilState(SelectedPreviewState);
+    const [mobileScreen, setMobileScreen] = useRecoilState(MobileScreenState);
 
     function onPressDelete() {
         setSelectedPreview(prev => prev.filter(item => item !== id));
+        if (mobileScreen === id) {
+            setMobileScreen(0);
+        }
+    }
+
+    function onPressItem() {
+        setMobileScreen(id);
     }
 
     return (
@@ -55,7 +63,8 @@ export default function SelectedPreviewItem({
                     _web: {
                         transition: "all 0.2s linear",
                     },
-                }}>
+                }}
+                onPress={onPressItem}>
                 <Image
                     source={PreviewList[id - 1].image}
                     w={"100%"}
