@@ -1,16 +1,23 @@
 import {Box, HStack, Pressable, Text, VStack} from "@gluestack-ui/themed";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {DeviceFrameset} from "react-device-frameset";
 import "react-device-frameset/styles/marvel-devices.min.css";
 import {ScrollView} from "react-native";
 import {IoIosTabletPortrait, IoIosPhonePortrait} from "react-icons/io";
 import {MdOutlineScreenRotation} from "react-icons/md";
+import {useRecoilValue} from "recoil";
+import {MobileScreenState} from "../../global/recoil";
+import {PreviewList} from "../../global/constant";
+import NoSelectMobileScreenComponent from "./NoSelectMobileScreenComponent";
 
 export default function Preview() {
     const [landscape, setLandscape] = useState(false);
     const [deviceFrame, setDeviceFrame] = useState<
         "iPhone 8 Plus" | "iPad Mini"
     >("iPhone 8 Plus");
+    const mobileScreen = useRecoilValue(MobileScreenState);
+    const [mobileScreenComponent, setMobileScreenComponent] =
+        useState<React.JSX.Element | null>(null);
 
     function toggleLandscape() {
         setLandscape(prev => !prev);
@@ -23,6 +30,14 @@ export default function Preview() {
     function onPressPhone() {
         setDeviceFrame("iPhone 8 Plus");
     }
+
+    useEffect(() => {
+        if (mobileScreen) {
+            setMobileScreenComponent(PreviewList[mobileScreen - 1].component!);
+        } else {
+            setMobileScreenComponent(NoSelectMobileScreenComponent);
+        }
+    }, [mobileScreen]);
 
     return (
         <Box flex={5} alignItems="center">
@@ -43,8 +58,10 @@ export default function Preview() {
                             style={{
                                 width: "100%",
                                 minHeight: 736,
-                            }}
-                        />
+                            }}>
+                            {mobileScreenComponent}
+                            <Box h={300} />
+                        </ScrollView>
                     </Box>
                 </DeviceFrameset>
                 <HStack position="absolute" bottom={40} left={30} space="md">
