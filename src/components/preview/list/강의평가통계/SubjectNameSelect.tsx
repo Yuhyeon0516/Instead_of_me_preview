@@ -1,6 +1,5 @@
 import {
     ChevronDownIcon,
-    Icon,
     Select,
     SelectBackdrop,
     SelectContent,
@@ -31,9 +30,7 @@ export default function SubjectNameSelect() {
                     color="black"
                     fontWeight="$medium"
                 />
-                <SelectIcon mr={10}>
-                    <Icon as={ChevronDownIcon} color="black" />
-                </SelectIcon>
+                <SelectIcon mr={10} as={ChevronDownIcon} color="black" />
             </SelectTrigger>
             <SelectPortal>
                 <SelectBackdrop />

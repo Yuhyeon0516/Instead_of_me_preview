@@ -3,7 +3,6 @@ import {
     ActionsheetItem,
     ActionsheetItemText,
     ChevronDownIcon,
-    Icon,
     Select,
     SelectBackdrop,
     SelectContent,
@@ -52,9 +51,12 @@ export default function Selector({actionItems, placeholder}: ISelector) {
                     fontWeight="$bold"
                     px={20}
                 />
-                <SelectIcon mr={10}>
-                    <Icon as={ChevronDownIcon} color="black" size="xl" />
-                </SelectIcon>
+                <SelectIcon
+                    mr={10}
+                    as={ChevronDownIcon}
+                    color="black"
+                    size="xl"
+                />
             </SelectTrigger>
             <SelectPortal isOpen={showActionSheet}>
                 <SelectBackdrop onPress={handleClose} />

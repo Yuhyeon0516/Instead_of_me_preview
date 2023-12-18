@@ -1,7 +1,6 @@
 import React from "react";
 import {
     ChevronDownIcon,
-    Icon,
     Select,
     SelectBackdrop,
     SelectContent,
@@ -26,9 +25,7 @@ export default function SelectTime() {
                     placeholder="수강 학기 선택"
                     style={{zIndex: -10}}
                 />
-                <SelectIcon mr={10}>
-                    <Icon as={ChevronDownIcon} />
-                </SelectIcon>
+                <SelectIcon mr={10} as={ChevronDownIcon} />
             </SelectTrigger>
             <SelectPortal>
                 <SelectBackdrop />

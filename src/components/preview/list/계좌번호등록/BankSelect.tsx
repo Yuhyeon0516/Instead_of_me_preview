@@ -2,7 +2,6 @@ import {
     ActionsheetItem,
     ActionsheetItemText,
     ChevronDownIcon,
-    Icon,
     Image,
     Select,
     SelectBackdrop,
@@ -45,9 +44,7 @@ export default function BankSelect() {
                     placeholder="은행 선택"
                     value={bank}
                 />
-                <SelectIcon mr={10}>
-                    <Icon as={ChevronDownIcon} color="black" />
-                </SelectIcon>
+                <SelectIcon mr={10} as={ChevronDownIcon} color="black" />
             </SelectTrigger>
             <SelectPortal isOpen={showActionSheet}>
                 <SelectBackdrop onPress={handleClose} />
