@@ -1,6 +1,5 @@
 import {
     ChevronDownIcon,
-    Icon,
     Select,
     SelectBackdrop,
     SelectContent,
@@ -27,9 +26,7 @@ export default function RatingRecommandSelect() {
                     color="black"
                     fontWeight="$medium"
                 />
-                <SelectIcon mr={10}>
-                    <Icon as={ChevronDownIcon} color="black" />
-                </SelectIcon>
+                <SelectIcon as={ChevronDownIcon} color="black" mr={10} />
             </SelectTrigger>
             <SelectPortal>
                 <SelectBackdrop />
