@@ -11,6 +11,7 @@ import 건강챌린지 from "./list/건강챌린지";
 import 건의하기 from "./list/건의하기";
 import 게시물 from "./list/게시물";
 import 결제상품선택 from "./list/결제상품선택";
+import 계좌번호등록 from "./list/계좌번호등록";
 
 export default function MobileScreenComponent() {
     const MS = useRecoilValue(MobileScreenState);
@@ -35,6 +36,8 @@ export default function MobileScreenComponent() {
         <게시물 />
     ) : MS === 9 ? (
         <결제상품선택 />
+    ) : MS === 10 ? (
+        <계좌번호등록 />
     ) : (
         <></>
     );
