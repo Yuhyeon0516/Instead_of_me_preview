@@ -10,6 +10,7 @@ import 개인정보보호방침 from "./list/개인정보보호방침";
 import 건강챌린지 from "./list/건강챌린지";
 import 건의하기 from "./list/건의하기";
 import 게시물 from "./list/게시물";
+import 결제상품선택 from "./list/결제상품선택";
 
 export default function MobileScreenComponent() {
     const MS = useRecoilValue(MobileScreenState);
@@ -32,6 +33,8 @@ export default function MobileScreenComponent() {
         <건의하기 />
     ) : MS === 8 ? (
         <게시물 />
+    ) : MS === 9 ? (
+        <결제상품선택 />
     ) : (
         <></>
     );
