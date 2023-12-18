@@ -4,6 +4,7 @@ import {useRecoilValue} from "recoil";
 import NoSelectMobileScreenComponent from "./NoSelectMobileScreenComponent";
 import 강의실 from "./list/강의실";
 import 강의평가 from "./list/강의평가";
+import 강의평가통계 from "./list/강의평가통계";
 
 export default function MobileScreenComponent() {
     const MS = useRecoilValue(MobileScreenState);
@@ -14,6 +15,8 @@ export default function MobileScreenComponent() {
         <강의실 />
     ) : MS === 2 ? (
         <강의평가 />
+    ) : MS === 3 ? (
+        <강의평가통계 />
     ) : (
         <></>
     );
