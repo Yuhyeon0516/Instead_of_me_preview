@@ -7,6 +7,7 @@ import 강의평가 from "./list/강의평가";
 import 강의평가통계 from "./list/강의평가통계";
 import 강의평등록 from "./list/강의평등록";
 import 개인정보보호방침 from "./list/개인정보보호방침";
+import 건강챌린지 from "./list/건강챌린지";
 
 export default function MobileScreenComponent() {
     const MS = useRecoilValue(MobileScreenState);
@@ -23,6 +24,8 @@ export default function MobileScreenComponent() {
         <강의평등록 />
     ) : MS === 5 ? (
         <개인정보보호방침 />
+    ) : MS === 6 ? (
+        <건강챌린지 />
     ) : (
         <></>
     );
