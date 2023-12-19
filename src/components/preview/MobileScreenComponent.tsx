@@ -16,6 +16,7 @@ import 고객센터 from "./list/고객센터";
 import 글쓰기 from "./list/글쓰기";
 import 공간예약 from "./list/공간예약";
 import 공간찜목록 from "./list/공간찜목록";
+import 공간필터 from "./list/공간필터";
 
 export default function MobileScreenComponent() {
     const MS = useRecoilValue(MobileScreenState);
@@ -50,6 +51,8 @@ export default function MobileScreenComponent() {
         <공간예약 />
     ) : MS === 14 ? (
         <공간찜목록 />
+    ) : MS === 15 ? (
+        <공간필터 />
     ) : (
         <></>
     );
