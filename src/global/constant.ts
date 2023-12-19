@@ -61,4 +61,9 @@ export const PreviewList: IPreviewItem[] = [
         title: "글쓰기",
         image: require("../assets/preview/글쓰기.png"),
     },
+    {
+        id: 13,
+        title: "공간 예약",
+        image: require("../assets/preview/공간예약.png"),
+    },
 ];
