@@ -81,4 +81,9 @@ export const PreviewList: IPreviewItem[] = [
         title: "공간 홈",
         image: require("../assets/preview/공간홈.png"),
     },
+    {
+        id: 17,
+        title: "공간 예약 결제",
+        image: require("../assets/preview/공간예약결제.png"),
+    },
 ];
