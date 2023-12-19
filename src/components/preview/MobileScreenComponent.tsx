@@ -18,6 +18,7 @@ import 공간예약 from "./list/공간예약";
 import 공간찜목록 from "./list/공간찜목록";
 import 공간필터 from "./list/공간필터";
 import 공간홈 from "./list/공간홈";
+import 공간예약결제 from "./list/공간예약결제";
 
 export default function MobileScreenComponent() {
     const MS = useRecoilValue(MobileScreenState);
@@ -56,6 +57,8 @@ export default function MobileScreenComponent() {
         <공간필터 />
     ) : MS === 16 ? (
         <공간홈 />
+    ) : MS === 17 ? (
+        <공간예약결제 />
     ) : (
         <></>
     );
