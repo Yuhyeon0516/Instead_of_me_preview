@@ -76,4 +76,9 @@ export const PreviewList: IPreviewItem[] = [
         title: "공간 필터",
         image: require("../assets/preview/공간필터.png"),
     },
+    {
+        id: 16,
+        title: "공간 홈",
+        image: require("../assets/preview/공간홈.png"),
+    },
 ];
