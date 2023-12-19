@@ -14,6 +14,7 @@ import 결제상품선택 from "./list/결제상품선택";
 import 계좌번호등록 from "./list/계좌번호등록";
 import 고객센터 from "./list/고객센터";
 import 글쓰기 from "./list/글쓰기";
+import 공간예약 from "./list/공간예약";
 
 export default function MobileScreenComponent() {
     const MS = useRecoilValue(MobileScreenState);
@@ -44,6 +45,8 @@ export default function MobileScreenComponent() {
         <고객센터 />
     ) : MS === 12 ? (
         <글쓰기 />
+    ) : MS === 13 ? (
+        <공간예약 />
     ) : (
         <></>
     );
