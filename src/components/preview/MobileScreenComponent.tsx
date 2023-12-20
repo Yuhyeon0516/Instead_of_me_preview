@@ -29,6 +29,7 @@ import 랭킹 from "./list/랭킹";
 import 추천 from "./list/추천";
 import 구인목록 from "./list/구인목록";
 import 공고등록 from "./list/공고등록";
+import 공고 from "./list/공고";
 
 export default function MobileScreenComponent() {
     const MS = useRecoilValue(MobileScreenState);
@@ -89,6 +90,8 @@ export default function MobileScreenComponent() {
         <구인목록 />
     ) : MS === 27 ? (
         <공고등록 />
+    ) : MS === 28 ? (
+        <공고 />
     ) : (
         <></>
     );
