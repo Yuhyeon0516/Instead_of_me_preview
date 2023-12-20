@@ -101,4 +101,9 @@ export const PreviewList: IPreviewItem[] = [
         title: "관심선택팝업(!)",
         image: require("../assets/preview/관심선택팝업.png"),
     },
+    {
+        id: 21,
+        title: "선호타입선택",
+        image: require("../assets/preview/선호타입선택.png"),
+    },
 ];
