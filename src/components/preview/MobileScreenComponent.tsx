@@ -21,6 +21,7 @@ import 공간홈 from "./list/공간홈";
 import 공간예약결제 from "./list/공간예약결제";
 import 공지사항 from "./list/공지사항";
 import 이력추가 from "./list/이력추가";
+import 관심선택팝업 from "./list/관심선택팝업";
 
 export default function MobileScreenComponent() {
     const MS = useRecoilValue(MobileScreenState);
@@ -65,6 +66,8 @@ export default function MobileScreenComponent() {
         <공지사항 />
     ) : MS === 19 ? (
         <이력추가 />
+    ) : MS === 20 ? (
+        <관심선택팝업 />
     ) : (
         <></>
     );
