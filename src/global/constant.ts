@@ -106,4 +106,9 @@ export const PreviewList: IPreviewItem[] = [
         title: "선호타입선택",
         image: require("../assets/preview/선호타입선택.png"),
     },
+    {
+        id: 22,
+        title: "교육종류선택(!)",
+        image: require("../assets/preview/교육종류선택.png"),
+    },
 ];
