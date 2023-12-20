@@ -25,6 +25,7 @@ import 관심선택팝업 from "./list/관심선택팝업";
 import 선호타입선택 from "./list/선호타입선택";
 import 교육종류선택 from "./list/교육종류선택";
 import 상품검색 from "./list/상품검색";
+import 랭킹 from "./list/랭킹";
 
 export default function MobileScreenComponent() {
     const MS = useRecoilValue(MobileScreenState);
@@ -77,6 +78,8 @@ export default function MobileScreenComponent() {
         <교육종류선택 />
     ) : MS === 23 ? (
         <상품검색 />
+    ) : MS === 24 ? (
+        <랭킹 />
     ) : (
         <></>
     );
