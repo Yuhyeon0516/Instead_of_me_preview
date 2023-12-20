@@ -8,17 +8,17 @@ export const PreviewList: IPreviewItem[] = [
     },
     {
         id: 2,
-        title: "강의평가",
+        title: "강의평가(!)",
         image: require("../assets/preview/강의평가.png"),
     },
     {
         id: 3,
-        title: "강의평가통계",
+        title: "강의평가통계(!)",
         image: require("../assets/preview/강의평가통계.png"),
     },
     {
         id: 4,
-        title: "강의평등록",
+        title: "강의평등록(!)",
         image: require("../assets/preview/강의평등록.png"),
     },
     {
@@ -48,7 +48,7 @@ export const PreviewList: IPreviewItem[] = [
     },
     {
         id: 10,
-        title: "계좌번호등록",
+        title: "계좌번호등록(!)",
         image: require("../assets/preview/계좌번호등록.png"),
     },
     {
@@ -58,12 +58,12 @@ export const PreviewList: IPreviewItem[] = [
     },
     {
         id: 12,
-        title: "글쓰기",
+        title: "글쓰기(!)",
         image: require("../assets/preview/글쓰기.png"),
     },
     {
         id: 13,
-        title: "공간 예약",
+        title: "공간 예약(!)",
         image: require("../assets/preview/공간예약.png"),
     },
     {
@@ -93,7 +93,7 @@ export const PreviewList: IPreviewItem[] = [
     },
     {
         id: 19,
-        title: "이력추가",
+        title: "이력추가(!)",
         image: require("../assets/preview/이력추가.png"),
     },
     {
