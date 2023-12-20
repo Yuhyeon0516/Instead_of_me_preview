@@ -121,4 +121,9 @@ export const PreviewList: IPreviewItem[] = [
         title: "랭킹",
         image: require("../assets/preview/랭킹.png"),
     },
+    {
+        id: 25,
+        title: "추천",
+        image: require("../assets/preview/추천.png"),
+    },
 ];
