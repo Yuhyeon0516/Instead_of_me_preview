@@ -191,4 +191,9 @@ export const PreviewList: IPreviewItem[] = [
         title: "댓글목록",
         image: require("../assets/preview/댓글목록.png"),
     },
+    {
+        id: 39,
+        title: "클래스신청",
+        image: require("../assets/preview/클래스신청.png"),
+    },
 ];
