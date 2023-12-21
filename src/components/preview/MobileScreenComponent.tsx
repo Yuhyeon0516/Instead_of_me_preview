@@ -40,6 +40,7 @@ import 구직자필터 from "./list/구직자필터";
 import 권한 from "./list/권한";
 import 날짜선택 from "./list/날짜선택";
 import 댓글목록 from "./list/댓글목록";
+import 클래스신청 from "./list/클래스신청";
 
 export default function MobileScreenComponent() {
     const MS = useRecoilValue(MobileScreenState);
@@ -122,6 +123,8 @@ export default function MobileScreenComponent() {
         <날짜선택 />
     ) : MS === 38 ? (
         <댓글목록 />
+    ) : MS === 39 ? (
+        <클래스신청 />
     ) : (
         <></>
     );
