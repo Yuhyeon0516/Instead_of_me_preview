@@ -31,6 +31,7 @@ import 구인목록 from "./list/구인목록";
 import 공고등록 from "./list/공고등록";
 import 공고 from "./list/공고";
 import 마이페이지 from "./list/마이페이지";
+import 주요업무팝업 from "./list/주요업무팝업";
 
 export default function MobileScreenComponent() {
     const MS = useRecoilValue(MobileScreenState);
@@ -95,6 +96,8 @@ export default function MobileScreenComponent() {
         <공고 />
     ) : MS === 29 ? (
         <마이페이지 />
+    ) : MS === 30 ? (
+        <주요업무팝업 />
     ) : (
         <></>
     );
