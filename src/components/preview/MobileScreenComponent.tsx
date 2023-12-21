@@ -47,6 +47,7 @@ import 스플래쉬로딩 from "./list/스플래쉬로딩";
 import 제품리뷰목록 from "./list/제품리뷰목록";
 import 리뷰작성하기 from "./list/리뷰작성하기";
 import 주문내역 from "./list/주문내역";
+import 마이페이지2 from "./list/마이페이지2";
 
 export default function MobileScreenComponent() {
     const MS = useRecoilValue(MobileScreenState);
@@ -143,6 +144,8 @@ export default function MobileScreenComponent() {
         <리뷰작성하기 />
     ) : MS === 45 ? (
         <주문내역 />
+    ) : MS === 46 ? (
+        <마이페이지2 />
     ) : (
         <></>
     );
