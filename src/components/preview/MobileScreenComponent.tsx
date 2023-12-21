@@ -30,6 +30,7 @@ import 추천 from "./list/추천";
 import 구인목록 from "./list/구인목록";
 import 공고등록 from "./list/공고등록";
 import 공고 from "./list/공고";
+import 마이페이지 from "./list/마이페이지";
 
 export default function MobileScreenComponent() {
     const MS = useRecoilValue(MobileScreenState);
@@ -92,6 +93,8 @@ export default function MobileScreenComponent() {
         <공고등록 />
     ) : MS === 28 ? (
         <공고 />
+    ) : MS === 29 ? (
+        <마이페이지 />
     ) : (
         <></>
     );
