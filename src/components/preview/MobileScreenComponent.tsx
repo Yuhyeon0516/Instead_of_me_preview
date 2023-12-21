@@ -43,6 +43,7 @@ import 댓글목록 from "./list/댓글목록";
 import 클래스신청 from "./list/클래스신청";
 import 마켓정보 from "./list/마켓정보";
 import 로그인 from "./list/로그인";
+import 스플래쉬로딩 from "./list/스플래쉬로딩";
 
 export default function MobileScreenComponent() {
     const MS = useRecoilValue(MobileScreenState);
@@ -131,6 +132,8 @@ export default function MobileScreenComponent() {
         <마켓정보 />
     ) : MS === 41 ? (
         <로그인 />
+    ) : MS === 42 ? (
+        <스플래쉬로딩 />
     ) : (
         <></>
     );
