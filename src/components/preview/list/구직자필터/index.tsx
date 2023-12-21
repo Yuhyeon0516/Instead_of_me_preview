@@ -45,7 +45,7 @@ export default function JobSeekerFilter() {
             <HStack
                 px={15}
                 position="absolute"
-                bottom={safeAreaInsets.bottom - 100}
+                bottom={safeAreaInsets.bottom - 250}
                 w={"$full"}
                 space="sm">
                 <Button variant="outline" size="xl" flex={1}>
