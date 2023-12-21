@@ -176,4 +176,9 @@ export const PreviewList: IPreviewItem[] = [
         title: "구직자필터",
         image: require("../assets/preview/구직자필터.png"),
     },
+    {
+        id: 36,
+        title: "권한",
+        image: require("../assets/preview/권한.png"),
+    },
 ];

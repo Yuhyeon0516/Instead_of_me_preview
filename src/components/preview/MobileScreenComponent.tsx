@@ -37,6 +37,7 @@ import 채팅 from "./list/채팅";
 import 구직자프로필 from "./list/구직자프로필";
 import 구직자프로필목록 from "./list/구직자프로필목록";
 import 구직자필터 from "./list/구직자필터";
+import 권한 from "./list/권한";
 
 export default function MobileScreenComponent() {
     const MS = useRecoilValue(MobileScreenState);
@@ -113,6 +114,8 @@ export default function MobileScreenComponent() {
         <구직자프로필목록 />
     ) : MS === 35 ? (
         <구직자필터 />
+    ) : MS === 36 ? (
+        <권한 />
     ) : (
         <></>
     );
