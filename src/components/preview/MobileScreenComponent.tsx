@@ -34,6 +34,7 @@ import 마이페이지 from "./list/마이페이지";
 import 주요업무팝업 from "./list/주요업무팝업";
 import 인재관리 from "./list/인재관리";
 import 채팅 from "./list/채팅";
+import 구직자프로필 from "./list/구직자프로필";
 
 export default function MobileScreenComponent() {
     const MS = useRecoilValue(MobileScreenState);
@@ -104,6 +105,8 @@ export default function MobileScreenComponent() {
         <인재관리 />
     ) : MS === 32 ? (
         <채팅 />
+    ) : MS === 33 ? (
+        <구직자프로필 />
     ) : (
         <></>
     );

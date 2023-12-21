@@ -161,4 +161,9 @@ export const PreviewList: IPreviewItem[] = [
         title: "채팅",
         image: require("../assets/preview/채팅.png"),
     },
+    {
+        id: 33,
+        title: "구직자프로필",
+        image: require("../assets/preview/구직자프로필.png"),
+    },
 ];
