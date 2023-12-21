@@ -42,6 +42,7 @@ import 날짜선택 from "./list/날짜선택";
 import 댓글목록 from "./list/댓글목록";
 import 클래스신청 from "./list/클래스신청";
 import 마켓정보 from "./list/마켓정보";
+import 로그인 from "./list/로그인";
 
 export default function MobileScreenComponent() {
     const MS = useRecoilValue(MobileScreenState);
@@ -128,6 +129,8 @@ export default function MobileScreenComponent() {
         <클래스신청 />
     ) : MS === 40 ? (
         <마켓정보 />
+    ) : MS === 41 ? (
+        <로그인 />
     ) : (
         <></>
     );
