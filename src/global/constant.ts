@@ -236,4 +236,9 @@ export const PreviewList: IPreviewItem[] = [
         title: "건강맞춤분석",
         image: require("../assets/preview/건강맞춤분석.png"),
     },
+    {
+        id: 48,
+        title: "가게검색하기",
+        image: require("../assets/preview/가게검색하기.png"),
+    },
 ];
