@@ -251,4 +251,9 @@ export const PreviewList: IPreviewItem[] = [
         title: "가게정보수정",
         image: require("../assets/preview/가게정보수정2.png"),
     },
+    {
+        id: 51,
+        title: "1:1문의",
+        image: require("../assets/preview/1:1문의.png"),
+    },
 ];
