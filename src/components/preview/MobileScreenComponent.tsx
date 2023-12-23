@@ -51,6 +51,7 @@ import 마이페이지2 from "./list/마이페이지2";
 import 건강맞춤분석 from "./list/건강맞춤분석";
 import 가게검색하기 from "./list/가게검색하기";
 import 가게정보수정 from "./list/가게정보수정";
+import 가게정보수정2 from "./list/가게정보수정2";
 
 export default function MobileScreenComponent() {
     const MS = useRecoilValue(MobileScreenState);
@@ -155,6 +156,8 @@ export default function MobileScreenComponent() {
         <가게검색하기 />
     ) : MS === 49 ? (
         <가게정보수정 />
+    ) : MS === 50 ? (
+        <가게정보수정2 />
     ) : (
         <></>
     );
