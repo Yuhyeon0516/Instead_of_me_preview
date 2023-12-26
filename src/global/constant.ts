@@ -271,4 +271,9 @@ export const PreviewList: IPreviewItem[] = [
         title: "받은후기현황",
         image: require("../assets/preview/받은후기현황.png"),
     },
+    {
+        id: 55,
+        title: "이사신청하기(!)",
+        image: require("../assets/preview/이사신청하기.png"),
+    },
 ];
