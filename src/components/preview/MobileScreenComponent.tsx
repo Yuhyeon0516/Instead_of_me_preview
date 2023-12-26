@@ -59,6 +59,7 @@ import 받은후기현황 from "./list/받은후기현황";
 import 이사신청하기 from "./list/이사신청하기";
 import 배달상점상세 from "./list/배달상점상세";
 import 배달홈 from "./list/배달홈";
+import 병원카테고리검색 from "./list/병원카테고리검색";
 
 export default function MobileScreenComponent() {
     const MS = useRecoilValue(MobileScreenState);
@@ -179,6 +180,8 @@ export default function MobileScreenComponent() {
         <배달상점상세 />
     ) : MS === 57 ? (
         <배달홈 />
+    ) : MS === 58 ? (
+        <병원카테고리검색 />
     ) : (
         <></>
     );

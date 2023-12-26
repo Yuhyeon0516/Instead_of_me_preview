@@ -286,4 +286,9 @@ export const PreviewList: IPreviewItem[] = [
         title: "배달홈",
         image: require("../assets/preview/배달홈.png"),
     },
+    {
+        id: 58,
+        title: "병원카테고리검색",
+        image: require("../assets/preview/병원카테고리검색.png"),
+    },
 ];
