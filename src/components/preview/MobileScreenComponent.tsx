@@ -54,6 +54,7 @@ import 가게정보수정 from "./list/가게정보수정";
 import 가게정보수정2 from "./list/가게정보수정2";
 import 문의리스트 from "./list/문의리스트";
 import 문의작성 from "./list/문의작성";
+import 문의제출결과 from "./list/문의제출결과";
 
 export default function MobileScreenComponent() {
     const MS = useRecoilValue(MobileScreenState);
@@ -164,6 +165,8 @@ export default function MobileScreenComponent() {
         <문의리스트 />
     ) : MS === 52 ? (
         <문의작성 />
+    ) : MS === 53 ? (
+        <문의제출결과 />
     ) : (
         <></>
     );
