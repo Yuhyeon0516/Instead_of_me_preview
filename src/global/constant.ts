@@ -266,4 +266,9 @@ export const PreviewList: IPreviewItem[] = [
         title: "문의제출결과",
         image: require("../assets/preview/문의제출결과.png"),
     },
+    {
+        id: 54,
+        title: "받은후기현황",
+        image: require("../assets/preview/받은후기현황.png"),
+    },
 ];
