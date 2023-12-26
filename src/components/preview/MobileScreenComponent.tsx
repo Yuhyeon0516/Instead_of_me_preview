@@ -56,6 +56,7 @@ import 문의리스트 from "./list/문의리스트";
 import 문의작성 from "./list/문의작성";
 import 문의제출결과 from "./list/문의제출결과";
 import 받은후기현황 from "./list/받은후기현황";
+import 이사신청하기 from "./list/이사신청하기";
 
 export default function MobileScreenComponent() {
     const MS = useRecoilValue(MobileScreenState);
@@ -170,6 +171,8 @@ export default function MobileScreenComponent() {
         <문의제출결과 />
     ) : MS === 54 ? (
         <받은후기현황 />
+    ) : MS === 55 ? (
+        <이사신청하기 />
     ) : (
         <></>
     );
